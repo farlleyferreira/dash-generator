@@ -1,0 +1,164 @@
+{
+  "data": {
+    "layout": {
+      "type": "grid",
+      "cellsPerRow": 3,
+      "cellsPerColumn": 2
+    },
+    "charts": [
+      {
+        "data": [
+          {
+            "labels": ["Compute", "Storage", "Network", "Database", "Support"],
+            "values": [5000, 3000, 2000, 1500, 1000],
+            "type": "pie",
+            "hoverinfo": "label+percent",
+            "textinfo": "value"
+          }
+        ],
+        "layout": {
+          "title": "Distribuição dos Custos por Serviço",
+          "showlegend": true
+        },
+        "cells": 1,
+        "order": 2
+      },
+      {
+        "data": [
+          {
+            "x": [
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06"
+            ],
+            "y": [10000, 12000, 15000, 13000, 17000, 18000],
+            "type": "scatter",
+            "mode": "lines+markers",
+            "name": "Custos Mensais"
+          }
+        ],
+        "layout": {
+          "title": "Custos ao Longo do Tempo",
+          "xaxis": { "title": "Mês" },
+          "yaxis": { "title": "Custo (em USD)" }
+        },
+        "cells": 2,"order": 1
+      },
+      {
+        "data": [
+          {
+            "x": ["Compute", "Storage", "Network", "Database"],
+            "y": [6000, 4000, 3000, 2000],
+            "type": "bar",
+            "name": "Custos Atuais"
+          }
+        ],
+        "layout": {
+          "title": "Custos por Serviço",
+          "xaxis": { "title": "Serviço" },
+          "yaxis": { "title": "Custo (em USD)" }
+        },
+        "cells": 2, "order": 4
+      },
+      {
+        "data": [
+          {
+            "domain": { "x": [0, 1], "y": [0, 1] },
+            "value": 70,
+            "title": { "text": "Uso de Orçamento (%)" },
+            "type": "indicator",
+            "mode": "gauge+number",
+            "gauge": {
+              "axis": { "range": [0, 100] },
+              "bar": { "color": "darkblue" },
+              "steps": [
+                { "range": [0, 50], "color": "lightgray" },
+                { "range": [50, 75], "color": "lightblue" },
+                { "range": [75, 100], "color": "red" }
+              ]
+            }
+          }
+        ],
+        "layout": {
+          "title": "Gauge: Uso do Orçamento"
+        },
+        "cells": 1, "order": 3
+      },
+      {
+        "data": [
+          {
+            "type": "indicator",
+            "mode": "number+delta",
+            "value": 15000,
+            "title": { "text": "Custo Atual Mensal (USD)" },
+            "delta": { "reference": 12000, "increasing": { "color": "red" } }
+          }
+        ],
+        "layout": {
+          "title": "KPI: Custo Mensal"
+        },
+        "cells": 1
+      },
+      {
+        "data": [
+          {
+            "x": ["2024-01", "2024-02", "2024-03", "2024-04"],
+            "y": [95, 85, 80, 70],
+            "type": "bar",
+            "marker": { "color": ["#00cc96", "#ffa15a", "#ab63fa", "#19d3f3"] }
+          }
+        ],
+        "layout": {
+          "title": "Disponibilidade dos Serviços (%)",
+          "xaxis": { "title": "Mês" },
+          "yaxis": { "title": "Disponibilidade (%)" }
+        },
+        "cells": 1
+      },
+      {
+        "data": [
+          {
+            "domain": { "x": [0, 1], "y": [0, 1] },
+            "type": "indicator",
+            "mode": "number",
+            "value": 5,
+            "title": { "text": "Incidentes Críticos no Mês" }
+          }
+        ],
+        "layout": {
+          "title": "KPI: Incidentes Críticos"
+        },
+        "cells": 1
+      }
+    ],
+    "styles": {
+      "dashboardContainer": {
+        "display": "grid",
+        "gap": "20px",
+        "padding": "20px",
+        "backgroundColor": "#f4f4f4",
+        "minHeight": "100vh"
+      },
+      "chartWrapper": {
+        "backgroundColor": "white",
+        "borderRadius": "10px",
+        "boxShadow": "0 4px 8px rgba(0, 0, 0, 0.1)",
+        "width": "100%",
+        "height": "100%"
+      },
+      "rowContainer": {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "gap": "20px"
+      },
+      "columnContainer": {
+        "display": "flex",
+        "flexDirection": "column"
+      }
+    }
+  }
+}
